@@ -1,0 +1,162 @@
+<section id="benefit">
+  <div class="benefit-info-section">
+
+    <ul class="nav nav-tabs benefitTabs">
+      <li class="active"><a href="#participating" data-toggle="tab">Participating</a></li>
+      <li><a href="#nonParticipating" data-toggle="tab">Non Participating</a></li>
+
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane active" id="participating">
+
+          <div class="panel panel-default benefitsHeader">
+            <div class="panel-heading benefitFilter">
+              <h5 class="panel-title ">
+                <div class="btn-group-vertical pull-right"><button class="btn btn-primary btn-xs">Expand All</button><button class="btn btn-info btn-xs">Colapse All</button></div>
+                  <ul class="list-inline">
+                    <li>
+                      <b>Specialty Code</b>
+                      <div class="dropdown">
+                        <a id="drop1" data-toggle="dropdown" role="button" href="#">Show All <span class="glyphicon glyphicon-align-justify"></span></a>
+
+                        <ul class="dropdown-menu" role="menu" data-toggle="dropdown" aria-labelledby="drop1">
+                          <li>NonForm</li>
+                          <li>FormTier1</li>
+                          <li>FormTier2</li>
+                          <li>FormTier3</li>
+                          <li>FormTier4</li>
+                        </ul>
+
+                      </div>
+
+                    </li>
+                    <li>
+                      <b>Place of Service</b> <div class="dropdown">
+                                          <a data-toggle="dropdown" href="#">Show All <span class="glyphicon glyphicon-align-justify"></span></a>
+                                          <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                            <li>Mail</li>
+                                          </ul>
+                                        </div>
+                    </li>
+                    <li>
+                      <b>Diagnosis Code(s)</b> <div class="dropdown">
+                                            <a data-toggle="dropdown" href="#">Show All <span class="glyphicon glyphicon-align-justify"></span></a>
+                                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                              <li>All</li>
+                                            </ul>
+                                          </div>
+                    </li>
+                  </ul>
+
+              </h5>
+            </div>
+          </div>
+
+        <ul class="sortable">
+                {{#each situations}}
+                    <li>
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h5 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseBenefit{{@index}}">
+
+                              <ul class="list-inline">
+                                <li>
+                                   {{specialtyCode}}
+                                </li>
+                                <li>
+                                   {{placeOfService}}
+                                </li>
+                                <li>
+                                   {{diagnosisCode}}
+                                </li>
+                              </ul>
+                            </a>
+                          </h5>
+                        </div>
+                        <div id="collapseBenefit{{@index}}" class="panel-collapse collapse">
+                          <div class="panel-body">
+                            <div class="pull-right"><input type="checkbox" disabled="disabled"> Pre-Authorization  &nbsp;&nbsp;<input type="checkbox" disabled="disabled"> Auto-Adjudication</div>
+                            <table class="table table-striped  table-condensed">
+                              <thead>
+                                <tr>
+                                  <th colspan="3">
+                                    Covered - Standard Calculation
+                                  </th>
+                                  <th>
+                                    OOP
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <b>1</b>
+                                  </td>
+                                  <td>
+                                    Mail Glucometers Unit Lmt
+                                  </td>
+                                  <td>
+                                    1 Unit(s) Every 365 Days
+                                  </td>
+                                  <td>
+
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <b>2</b>
+                                  </td>
+                                  <td>
+                                    Formulary Tier 3 Mail Copay
+                                  </td>
+                                  <td>
+                                    15$ Per Prescription
+                                  </td>
+                                  <td>
+                                    <input type="checkbox" disabled="disabled" checked >
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <b>3</b>
+                                  </td>
+                                  <td>
+                                    INN Mail Deductible
+                                  </td>
+                                  <td>
+                                    $250 Per Calendar Year
+                                  </td>
+                                  <td>
+                                    <input type="checkbox" disabled="disabled" checked >
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <b>4</b>
+                                  </td>
+                                  <td>
+                                     Formulary Tier 3 Mail Coinsurance
+                                  </td>
+                                  <td>
+                                    Not Applicable Min:N/A Max:N/A
+                                  </td>
+                                  <td>
+                                    <input type="checkbox" disabled="disabled" checked >
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                {{/each}}
+        </ul>
+    </div>
+    <div class="tab-pane" id="nonParticipating">
+      Non Participating Tab
+    </div>
+  </div>
+</section>

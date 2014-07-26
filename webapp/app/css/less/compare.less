@@ -1,0 +1,50 @@
+
+#compareView{
+  margin-top: -50px;
+  display: none;
+}
+#compareView table{
+  width: 96%;
+  margin: 0 2%;
+}
+#compareView table.topTable {
+  margin-left: 26%;
+  width: 72%;
+  margin-top: 20px;
+}
+
+#compareView table thead{
+  background: #EFF4FA;
+  font-weight: bold;
+  cursor: pointer;
+  color: #3E71B6;
+}
+
+#compareView table tbody td{
+  font-size: 12px;
+}
+#compareView table tbody tr{
+  background: white;
+}
+#compareView table tbody tr:nth-child(2n){
+  background: #f9f9f9;
+}
+#compareView table:nth-child(1) thead{
+  background: #C5D8EB;
+  color: black;
+}
+#compareView table:nth-child(1) thead td{
+  border-bottom: 1px solid gray;
+}
+#compareView table tr td{
+  border: solid 1px #C5D8EB;
+  width: 25%;
+  max-width: 25%;
+  padding: 2px;
+}
+#compareView table.topTable tr td {
+  width: 33%;
+}
+#compareView table:not(:nth-child(1)) tr td:nth-child(1){
+  text-align: left;
+}

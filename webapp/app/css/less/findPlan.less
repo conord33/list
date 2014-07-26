@@ -1,0 +1,224 @@
+
+#findPlan {
+  margin-top: -50px;
+
+  table{
+      width: 100%;
+      th{
+          padding: 10px 0px;
+          background-color: #005488;
+          color: #fff;
+          font-weight: normal;
+      }
+      th.planName{
+          width: 30%;
+      }
+
+      td{
+          padding: 8px 4px;
+          width: 9%;
+      }
+      td:nth-child(1){
+          text-align: left;
+      };
+      tr:nth-child(2n){
+          background: #ddd;
+      }
+  }
+
+  #addNewSong{
+      height: 50px;
+      width: 100%;
+      background: white;
+      position: fixed;
+      bottom: 0px;
+
+      input {
+          height: 50px;
+          width: 270px;
+      }
+
+      .nav>li>a {
+          padding: 5px 15px;
+      }
+
+      #send-to-friends{
+
+      }
+      #back-to-list{
+
+      }
+
+  }
+
+
+}
+
+
+
+
+
+
+
+
+/*SEARCH SECTION*/
+#findPlanSearch{
+  width: 100%;
+  margin: auto;
+  width: 820px;
+  margin-top: -45px;
+}
+
+#findPlanSearchSection{
+  padding: 15px 9px;
+  border: 1px solid #939597;
+  background: #e4e5e6;
+}
+#findPlanSearchSection table tr td{
+  vertical-align: top;
+  text-align: left;
+}
+#findPlanSearchSection label {
+  width: 115px;
+}
+#findPlanSearchSection.top{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+#findPlanSearchSection.bottom{
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.advancedSearch, .freeTextSearch, #basicSearchLink{
+  text-decoration: underline;
+  font-size: 12px;
+  vertical-align: bottom;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.headerCriteria{
+  font-weight: bold;
+}
+.headerCriteriaToggle{
+  padding-left: 15px;
+}
+.addedHeaderCriteria{
+  width: 100%;
+}
+#headerCriteriaSelectors{
+  display: none;
+}
+.headerCiteriaContentColumn{
+  height: 150px;
+  width: 317px;
+  float: left;
+  margin-right: 3px;
+  margin-left: 4px;
+  overflow: auto;
+}
+.headerCiteriaContentColumn.selectors{
+  background: #eee;
+  border: 1px solid #ccc;
+}
+.headerCiteriaContentColumn.main{
+  margin-right: 21px;
+}
+
+.headerCiteriaContentColumn.selected{
+  height: 25px;
+}
+.headerCiteriaContentColumn.selected.main{
+  font-weight: bold;
+}
+.headerCiteriaContentColumn a{
+  width: 100%;
+}
+.headerCiteriaContentColumn .list-group-item{
+  padding: 3px;
+}
+.labelsm{
+  font-size: 12px;
+  margin-left: 8px;
+  font-weight: bold;
+  // text-align: center;
+}
+#basicSearchLink{
+  margin-top: -10px;
+}
+#freeTextSearchContent #findPlanSearchSection{
+  border-radius: 4px;
+  padding: 15px 9px 5px;
+}
+#advancedSearchContent, #freeTextSearchContent{
+  display: none;
+}
+
+#searchReference{
+  display: none;
+  margin-top: -50px;
+}
+#searchReference #edit{
+    margin: 10px;
+    margin-left: 20px;
+}
+#searchReference .criteria {
+  padding: 3px 10px;
+  margin: 10px;
+  background-color: #e4e5e6;
+  border-radius: 4px;
+  border: 1px solid #939597;
+}
+
+
+#find{
+  margin: 0px 15px;
+  background-color: #005387;
+  background-image: linear-gradient(to bottom,#428bca 0,#005387 100%);
+  border: none;
+
+}
+#clear{
+  background: #007ea3;
+  background-image: linear-gradient(to bottom,#5bc0de 0,#007ea3 100%);
+  border: none;
+}
+
+
+/*RESULTS SECTION*/
+.criteriaContainer{
+  margin-bottom: 10px;
+}
+.criteriaContainer:not(:nth-child(1)){
+  float: left;
+}
+#searchResultTable table{
+  width: 96%;
+  margin: 10px 20px;
+  background: #eee;
+  cursor: pointer;
+  display: none;
+}
+#searchResultTable table thead tr td{
+  background: #C5D8EB;
+  font-weight: bold;
+  border-bottom: 1px solid gray;
+  /*border-top: 1px solid gray;*/
+}
+
+#searchResultTable table tr td:nth-child(1){
+  width: 2%;
+}
+#searchResultTable table tr td:nth-child(2){
+  width: 45%;
+}
+#searchResultTable table tr td{
+  border: solid 1px #C5D8EB;
+  padding: 2px;
+}
+
+#searchResultTable table tbody tr:nth-child(2n){
+  background: #f9f9f9;
+}
+#searchResultTable table tbody tr:hover{
+  background: #fff;
+}
