@@ -1,0 +1,31 @@
+---
+app:
+  # Ip for private network
+  privateIp: "10.33.33.33"
+  # Name of host for api setup in your /etc/hosts 
+  apiServerName: "local.api.list.com"
+
+# These options are only required to spin up an aws instance.  If you do not
+# use vagrant up --provider=aws this will be ignored.
+# You will also need to install the proper plugin with: 
+# vagrant plugin install vagrant-aws 
+aws:
+  # The user to sign into the instance
+  username: "ubuntu"
+  # The path to the private being used to ssh into the instance
+  privateKeyPath: ""
+  # Name of the key pair being used, get this from the aws console
+  keypairName: ""
+  # Aws access key id, get this from aws console
+  accessKeyId: ""
+  # Aws sercret access key, get this from aws console
+  secretAccessKey: ""
+  # Security groups to be used, can be a yaml array, get these from aws console
+  securityGroups: "launch-wizard-11"
+  # The type of instance you want to spin up
+  instanceType: "t1.micro"
+  # The id of the ami you want to use to spin up
+  amiId: "ami-59a4a230"
+  # The name of the instance you are spinning up
+  instanceName: 'MABI_VAGRANT_TEST'
+  
