@@ -1,0 +1,10 @@
+{
+  "name": "songlist",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "^4.7.0",
+    "pm2": "^0.9.1",
+    "request": "^2.36.0",
+    "underscore": "~1.5.2"
+  }
+}
