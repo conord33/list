@@ -3,3 +3,9 @@
 
 ### IDE
 .idea/
+
+### Vagrant
+.vagrant/
+
+### node
+node_modules/

@@ -26,7 +26,7 @@ class system-update {
   }
 }
 
-class {'known_hosts':} ->
+# class {'known_hosts':} ->
 class {'repos':} ->
 class {'system-update':}
 
@@ -34,14 +34,16 @@ class {'git':
   require => Class['system-update'],
 }
 
+/*  no redis now maybe later?
 class {'redis-server':
   require => Class['system-update'],
 }
+*/
 
 class {'nodejs':
   require => [
     Class['system-update'],
     Class['git'],
-    Class['redis-server']
+    #Class['redis-server']
   ],
 }

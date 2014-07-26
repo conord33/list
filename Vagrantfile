@@ -1,7 +1,7 @@
 require 'yaml'
 
 dir = File.dirname(File.expand_path(__FILE__))
-confVals = YAML.load_file("#{dir}/server/vagrant/config.yaml")
+confVals = YAML.load_file("#{dir}/vagrant/config.yaml")
 appDir = dir.split('/')[-1]
 
 Vagrant.configure('2') do |config|
@@ -49,15 +49,15 @@ Vagrant.configure('2') do |config|
   
   # Enable shell provisioning to bootstrap puppet
   # This installs puppet if it is not already installed (good for aws)
-  config.vm.provision :shell, :path => "server/vagrant/bootstrap.sh"
+  config.vm.provision :shell, :path => "vagrant/bootstrap.sh"
 
   # Enable provisioning with Puppet stand alone.  Puppet manifests
   # are contained in a directory path relative to this Vagrantfile.
-  config.vm.provision :puppet, :module_path => "server/vagrant/puppet/modules" do |puppet|
-    puppet.manifests_path = "server/vagrant/puppet/manifests"
+  config.vm.provision :puppet, :module_path => "vagrant/puppet/modules" do |puppet|
+    puppet.manifests_path = "vagrant/puppet/manifests"
     puppet.manifest_file  = "base.pp"
     puppet.facter = {
-      'app_dir' => "#{appDir}/server/api",
+      'app_dir' => "#{appDir}",
       'api_server_name' => confVals['app']['apiServerName'],
     }
   end
