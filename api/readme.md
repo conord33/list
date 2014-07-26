@@ -15,4 +15,4 @@ GET    /users/:userId/friends
 POST   /users/:userId/share
 
 #### Remove item from list
-DELETE /users/:userId/list/:itemId   
+DELETE /users/:userId/list/:itemId

@@ -57,7 +57,7 @@ Vagrant.configure('2') do |config|
     puppet.manifests_path = "vagrant/puppet/manifests"
     puppet.manifest_file  = "base.pp"
     puppet.facter = {
-      'app_dir' => "#{appDir}",
+      'app_dir' => "#{appDir}/api",
       'api_server_name' => confVals['app']['apiServerName'],
     }
   end
